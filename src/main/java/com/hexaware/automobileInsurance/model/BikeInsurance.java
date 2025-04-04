@@ -9,68 +9,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
+public class BikeInsurance {
 
-public class CarInsurance {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
-    @Column(name = "CarModel", length = 255)
-    private String carModel;
-
-    @Column(name = "CarVariant", length = 45)
-    private String carVariant;
-
-    @Column(name = "RegistrationYear", length = 45)
-    private String registrationYear;
-
-    @Column(name = "FuelType", length = 45)
-    private String fuelType;
-
-    @Column(name = "PolicyExpiryDate")
-    private LocalDateTime policyExpiryDate;
-
-    @Column(name = "MadeClaim", length = 45)
-    private String madeClaim;
-
-    @Column(name = "PreviousPolicyImg", length = 45)
-    private String previousPolicyImg;
-
-    @Column(name = "CommercialCar", length = 45)
-    private String commercialCar;
-
-    @Column(name = "KilometersDriven")
-    private int kilometersDriven;
-
-    @Column(name = "OwnerType", length = 45)
-    private String ownerType;
-
-    @Column(name = "PreviousInsuranceProvider", length = 45)
-    private String previousInsuranceProvider;
-
-    @Column(name = "UserName", length = 45)
-    private String userName;
-
-    @Column(name = "Pincode", length = 45)
-    private String pincode;
-
-    @Column(name = "Contact", length = 45)
-    private String contact;
-
-    @Column(name = "Mail", columnDefinition = "TEXT")
-    private String mail;
-
-    @Column(name = "GSTNumber", length = 45)
-    private String gstNumber;
-
-    @Column(name = "RegistrationCertificateURL", length = 45)
-    private String registrationCertificateURL;
-
-    @Column(name = "DrivingLicense", length = 45)
-    private String drivingLicense;
-
-	public Integer getId() {
+    public Integer getId() {
 		return id;
 	}
 
@@ -78,20 +19,20 @@ public class CarInsurance {
 		this.id = id;
 	}
 
-	public String getCarModel() {
-		return carModel;
+	public String getBikeMakeModel() {
+		return bikeMakeModel;
 	}
 
-	public void setCarModel(String carModel) {
-		this.carModel = carModel;
+	public void setBikeMakeModel(String bikeMakeModel) {
+		this.bikeMakeModel = bikeMakeModel;
 	}
 
-	public String getCarVariant() {
-		return carVariant;
+	public String getVariant() {
+		return variant;
 	}
 
-	public void setCarVariant(String carVariant) {
-		this.carVariant = carVariant;
+	public void setVariant(String variant) {
+		this.variant = variant;
 	}
 
 	public String getRegistrationYear() {
@@ -134,12 +75,12 @@ public class CarInsurance {
 		this.previousPolicyImg = previousPolicyImg;
 	}
 
-	public String getCommercialCar() {
-		return commercialCar;
+	public String getCommercialBike() {
+		return commercialBike;
 	}
 
-	public void setCommercialCar(String commercialCar) {
-		this.commercialCar = commercialCar;
+	public void setCommercialBike(String commercialBike) {
+		this.commercialBike = commercialBike;
 	}
 
 	public int getKilometersDriven() {
@@ -222,5 +163,61 @@ public class CarInsurance {
 		this.drivingLicense = drivingLicense;
 	}
 
-}
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
+    @Column(name = "BikeMakeModel", length = 255)
+    private String bikeMakeModel;
+
+    @Column(name = "Variant", length = 45)
+    private String variant;
+
+    @Column(name = "RegistrationYear", length = 45)
+    private String registrationYear;
+
+    @Column(name = "FuelType", length = 45)
+    private String fuelType;
+
+    @Column(name = "PolicyExpiryDate")
+    private LocalDateTime policyExpiryDate;
+
+    @Column(name = "MadeClaim", length = 45)
+    private String madeClaim;
+
+    @Column(name = "PreviousPolicyImg", length = 45)
+    private String previousPolicyImg;
+
+    @Column(name = "CommercialBike", length = 45)
+    private String commercialBike;
+
+    @Column(name = "KilometersDriven")
+    private int kilometersDriven;
+
+    @Column(name = "OwnerType", length = 45)
+    private String ownerType;
+
+    @Column(name = "PreviousInsuranceProvider", length = 45)
+    private String previousInsuranceProvider;
+
+    @Column(name = "UserName", length = 45)
+    private String userName;
+
+    @Column(name = "Pincode", length = 45)
+    private String pincode;
+
+    @Column(name = "Contact", length = 45)
+    private String contact;
+
+    @Column(name = "Mail", columnDefinition = "TEXT")
+    private String mail;
+
+    @Column(name = "GSTNumber", length = 45)
+    private String gstNumber;
+
+    @Column(name = "RegistrationCertificateURL", length = 45)
+    private String registrationCertificateURL;
+
+    @Column(name = "DrivingLicense", length = 45)
+    private String drivingLicense;
+}
