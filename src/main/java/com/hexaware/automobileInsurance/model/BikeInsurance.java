@@ -129,7 +129,7 @@ public class BikeInsurance {
 
 	public void setContact(String contact) {
 		this.contact = contact;
-	}
+	}	
 
 	public String getMail() {
 		return mail;

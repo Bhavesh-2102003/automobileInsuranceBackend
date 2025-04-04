@@ -18,6 +18,7 @@ public class CarInsuranceController {
 	@PostMapping("/api/insurance/getcarquote")
 	public Quote getCarQuote(@RequestBody CarInsurance carInsurance)
 	{
+		carInsuranceService.saveCarDetails(carInsurance);
 		return carInsuranceService.getCarQuote(carInsurance);
 	}
 }

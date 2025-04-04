@@ -18,6 +18,10 @@ public class BikeInsuranceController {
 	@PostMapping("/api/insurance/getbikequote")
 	public Quote getBikeQuote(@RequestBody BikeInsurance bikeInsurance)
 	{
+		bikeInsuranceService.saveBikeDetails(bikeInsurance);
+		
 		return bikeInsuranceService.getBikeQuote(bikeInsurance);
 	}
+	
+	
 }
